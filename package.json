@@ -1,0 +1,29 @@
+{
+  "name": "videoinfo",
+  "version": "1.0.0",
+  "description": "First Electron App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanpixxer/videoinfo.git"
+  },
+  "keywords": [
+    "App",
+    "Electron",
+    "JavaScript",
+    "HTML",
+    "CSS"
+  ],
+  "author": "Darrell Chaddock",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanpixxer/videoinfo/issues"
+  },
+  "homepage": "https://github.com/vanpixxer/videoinfo#readme",
+  "dependencies": {
+    "electron": "^3.0.13"
+  }
+}
