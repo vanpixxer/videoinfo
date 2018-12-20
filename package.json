@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/vanpixxer/videoinfo#readme",
   "dependencies": {
-    "electron": "^3.0.13"
+    "electron": "^3.0.13",
+    "fluent-ffmpeg": "^2.1.2"
   }
 }

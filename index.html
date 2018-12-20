@@ -17,6 +17,11 @@
       </form>
 
       <script>
+        //inter process communication (IPC) is accessed through Electron module
+        const electron = require('electron');
+        //get access to IPC system by pulling an object from Electron library
+        const { ipcRenderer } = electron;
+
           document.querySelector('form').addEventListener('submit', (event) => {
                event.preventDefault();
                const file = document.querySelector('input').files[0];
