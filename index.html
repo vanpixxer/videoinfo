@@ -16,6 +16,8 @@
         <button type="submit">Get Info</button>
       </form>
 
+      <h1 id="result"></h1>
+
       <script>
         //inter process communication (IPC) is accessed through Electron module
         const electron = require('electron');
@@ -24,7 +26,14 @@
 
           document.querySelector('form').addEventListener('submit', (event) => {
                event.preventDefault();
-               const file = document.querySelector('input').files[0];
+               const { path } = document.querySelector('input').files[0];
+
+               //communicate the path to the given file over to Electron side of the app
+               ipcRenderer.send( 'video:submit', path);
+          });
+
+          ipcRenderer.on('video:metadata', (event, duration) => {
+              document.querySelector('#result').innerHTML = `Video is ${duration} seconds`;
           });
       </script>
 </body>
